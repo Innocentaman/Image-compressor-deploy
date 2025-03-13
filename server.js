@@ -6,6 +6,11 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
+const corsOptions = {
+    origin: ["https://67d31f864eb5ac24498044a8--lambent-stardust-415fb4.netlify.app/"], // Replace with your actual Netlify domain
+    methods: "GET,POST,PUT,DELETE",
+    allowedHeaders: "Content-Type,Authorization",
+  };
 app.use(cors());
 app.use(express.json());
 
